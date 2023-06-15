@@ -1,0 +1,300 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open sans', sans-serif;
+
+    --primario: #784d3c;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #e1e1e1; 
+}
+
+html {
+    box-sizing: border-box;/* Para que el pading no afecte al ancho de nuestros elementos */
+    font-size: 66.5%; /* 1 rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;/* ereda del elemento padre que es el html */
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;/* Interlineado */
+}
+/* Globales Lo que se va a utilizar mas de una vez */
+.contenedor {
+    max-width: 120rem;/* Si hay espacio Maximo 1200px */
+    width: 90%;/* Si no hay espacio el maximo que sea del 90% */
+    /*
+    Es lo mismo que lo de arriba
+    width: min(90%, 120rem); 
+    */
+    margin: 0 auto;/* Para centrar el contenido en la pantalla */
+}
+a {
+    text-decoration: none;/* Quitamos la linea de los enlaces */
+}
+h1,h2,h3,h4 {
+    font-family: var(--fuenteHeading);/* Todos los H tienen la misma fuente */
+    line-height: 1.2;/* Interlineado */
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+/* Utilidades */
+.no-margin {
+    margin: 0;
+}
+.no-pading {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/* Header */
+/* para cargar imagenes menos pesadas con webp */
+.webp .header {
+    background-image: url(../blogdecafe_inicio/img/banner.webp);
+}
+.no-webp .header {
+    background-image: url(../blogdecafe_inicio/img/banner.jpg);
+}
+
+.header {
+    background-image: url(../blogdecafe_inicio/img/banner.jpg);/* Agregamos la imagen con css */
+    height: 60rem;/* Altura de la imagen */
+    background-size: cover;/* Que cubra todo el espacio disponible */
+    background-repeat: no-repeat;/* Para que la imagen no se repita */
+    background-position: center center;/* Para que se centre horizontal y verticalmente y siempre muestre el centro */
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;/* Para darle un poco mas de margen arriba en dispositivos grandes */
+    }
+}
+.header__texto {
+    text-align: center;/* Texto centrado */
+    color: var(--blanco);/* Color de la fuente */
+    margin-top: 5rem;/* espacio con elemento de arriba */
+}
+
+/* Barra principal de navegacion y Logo */
+.barra {
+    padding-top: 4rem;/* Damos separacion en la parte superior */
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;/* Activamos flex */
+        justify-content: space-between;/* Cada uno en un lateral */
+        align-items: center;/* Lo alineamos al contenido */
+    }
+}
+.logo {
+    color: var(--blanco);/* Color letra del logo */
+}
+.logo__nombre {
+    font-weight: 400;/* grosor de letra */
+}
+.logo__bold {
+    font-weight: 700;/* Grosor de la letra span */
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;/* Se pondran uno frente a optro en pantallas de mas de 768px */
+        gap: 2rem;/* Espacio entre enlaces en pantallas de m,as de 768px */
+    }
+}
+.navegacion__enlace {
+    display: block;/* Para que lkos elementos esten uno debajo del otro */
+    text-align: center;/* Centramos los enlaces */
+    font-size: 1.8rem;/* Tamaño de fuente */
+    color: var(--blanco);/* Color de la fuente */
+}
+
+/* Blog */
+@media (min-width: 768px) { /* Para pantallas de mas de 768px */
+    .contenido-principal {
+        display: grid;/* Activamnos grid para poder posicionar los elementos */
+        grid-template-columns: 2fr 1fr;/* Lo partimos en tres partes, las dos primeras toman 2 fracciones y la tercera 1 fraccion */
+        column-gap: 4rem;/* Separacion entre columnas */
+    }
+    
+}
+
+
+.entrada {/* linea que separa las entradas de blog */
+    border-bottom: 1px solid var(--gris);/* Creamos la linea */
+    margin-bottom: 2rem;/* Le damos separacion con el de arriba */
+}
+.entrada:last-of-type {/* Seleccionamos el ultimo Eliminamos la linea */
+    border: none;/* Quitamos el borde */
+    margin-bottom: 0;
+}
+
+.boton {/* Boton de blog */
+    display: block;/* Para que tome todo el espacio disponible en un mov */
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;/* Espacio 1rem arriba y abajo 3rem izquierda derecha */
+    font-size: 1.8rem;
+    text-transform: uppercase;/* Para que sea en negrita */
+    font-weight: 700;/* tamaño */
+    margin-bottom: 2rem; /* Para que aya separacion abajo */
+    border: none;/* Elimina los estilos basicos y le da los nuestros */
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;/* Toma el espacio necesario pero respeta los margin y los width */
+    }
+}
+.boton:hover {
+    cursor: pointer;/* Vuelve el cursor en los botones */
+}
+.boton--primario {/* Modificador */
+    background-color: var(--negro);
+}
+/* Cursos */
+.boton--secundario {/* Boton cursos */
+    background-color: var(--primario);
+}
+.cursos {/* Quitamos las viñetas */
+    list-style: none;
+}
+
+/* Columna cursos misma configuracion que blog */
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type,
+.curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label,
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info,
+.curso__info {
+    font-weight: 400;
+}
+
+.widget-curso__label,/* Hacemos la zona mas grande */
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 3rem;/* Separacion abajo */
+    margin-top: 4rem;/* Espacio con el objeto de arriba */
+}
+
+/* Sobre nosotros */
+
+@media (min-width: 768px) {
+/* esto seria con grid     
+.sobre-nosotros {
+        display: grid;/* Activamos grid 
+        grid-template-columns: repeat(2 , 1fr); 2 columnas de una fraccion 
+        column-gap: 2rem;  Espacio entre columnas 
+    } */
+    /* Esto con flex box */
+    .sobre-nosotros {
+        display: flex;/* Activamos flexbox */
+        justify-content: space-between; /* Se ajustan los elementos automaticamente */
+    }
+    .sobre-nosotros__imagen,
+    .sobre-nosotros__texto {
+        flex-basis: calc(50% - 1rem);/* cada elemento toma el 50% del ancho menos un rem cada uno en el centro */
+    }
+}
+
+/* Cursos */
+
+.curso { /* Linea de separacion */
+    padding: 3rem 0;/* Espacio 3rem arriba y abajo y cero a los lados */
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;/* Damos valor al espacio que tomara cada columna */
+        column-gap: 2rem;/* Separacion entre columnas */
+    }
+}
+.curso:last-of-type {
+    border: none;/* Elimina la linea de abajo del todo del ultimo curso */
+}
+
+/* Contacto */
+
+.contacto-bg {
+    background-image: url(../blogdecafe_inicio/img/contacto.jpg);/* Introducimos la imagen */
+    height: 40rem;/* Definimos altura */
+    background-size: cover;/* Que cubra todo el espacio */
+    background-repeat: no-repeat;/* Para que no se repita la imagen */
+}
+
+.error {
+    background-color: rgb(185, 0, 0);
+    padding: 1rem .5rem;
+    text-align: center;
+    color: var(--blanco);
+}
+.correcto {
+    background-color: rgb(74, 185, 0);
+    padding: 1rem .5rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;/* Para que suba el formulario */
+    width: 95%;/* Para que no tome todo el espacio disponible */
+    padding: 5rem;/* En todas las direcciones */
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;/* Para los espacios entre campos */
+}
+.campo__label {
+    flex: 0 0 9rem;/* Asiganmos tamaño */
+}
+.campo__field {
+    flex: 1;/* Asignamos tamaño */
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+    height: 20rem;
+    resize: none;/* evita que puedan hacer el textarea mas grande */
+}
+
+/* Para hacer responsive el formulario en pantallas mas pequeñas */
+@media (max-width: 768px) {
+    .campo__field {
+        width: 100%;/*Para que tome todo el espacio dispopnible*/
+
+        padding: 1.5rem;/*Hacemos los input mas grandes*/
+
+    }
+}
