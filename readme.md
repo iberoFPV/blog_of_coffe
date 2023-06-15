@@ -1,15 +1,16 @@
-Proyecto Blog de Café: Aprendiendo Programación con HTML5, CSS y JavaScript
+Coffee Blog Project: Learning Programming with HTML5, CSS, and JavaScript ☕📚🖥️
 
-Este proyecto es un blog de café creado con el propósito de aprender programación utilizando HTML5, CSS y JavaScript de manera autodidacta. En este proyecto, exploraremos cómo se han utilizado estas tecnologías para 
-desarrollar un blog interactivo que incluye enlaces a cursos relacionados con el café, información sobre nosotros y un formulario de contacto implementado con JavaScript.
+This project is a coffee blog created with the purpose of learning programming using HTML5, CSS, and JavaScript in a self-taught manner. In this project, we will explore how these technologies have been used to develop
+an interactive blog that includes links to coffee-related courses, information about us, and a contact form implemented with JavaScript.
 
-Tecnologías Utilizadas
+Our website is hosted on the Netlify hosting platform. Thanks to Netlify, we can showcase all the work done. The website can be accessed through the following link: https://fabulous-dodol-a2e562.netlify.app/ 🌐
 
-El proyecto del Blog de Café ha sido desarrollado utilizando las siguientes tecnologías:
+Technologies Used 💻
 
-HTML5: Se ha utilizado HTML5 para estructurar y organizar el contenido de la página web. Se han creado elementos semánticos, para presentar la información de manera clara y accesible.
+The Coffee Blog project has been developed using the following technologies:
 
-CSS: CSS ha sido empleado para dar estilo y diseño al blog de café. Se han utilizado reglas de estilo CSS para personalizar la apariencia visual del proyecto, incluyendo colores, fuentes, márgenes y otros aspectos visuales.
+HTML5: HTML5 has been used to structure and organize the content of the website. Semantic elements have been created to present information in a clear and accessible manner.
 
-JavaScript: JavaScript ha sido utilizado para agregar interactividad y funcionalidad dinámica al proyecto. Se ha implementado JavaScript para manejar el formulario de contacto, validar los campos y enviar la información 
-ingresada por el usuario.
+CSS: CSS has been employed to style and design the coffee blog. CSS style rules have been used to customize the visual appearance of the project, including colors, fonts, margins, and other visual aspects.
+
+JavaScript: JavaScript has been used to add interactivity and dynamic functionality to the project. JavaScript has been implemented to handle the contact form, validate fields, and send the user-entered information. 💡💻🔧
