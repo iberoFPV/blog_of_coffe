@@ -3,7 +3,7 @@ Coffee Blog Project: Learning Programming with HTML5, CSS, and JavaScript ☕�
 This project is a coffee blog created with the purpose of learning programming using HTML5, CSS, and JavaScript in a self-taught manner. In this project, we will explore how these technologies have been used to develop
 an interactive blog that includes links to coffee-related courses, information about us, and a contact form implemented with JavaScript.
 
-Our website is hosted on the Netlify hosting platform. Thanks to Netlify, we can showcase all the work done. The website can be accessed through the following link: https://fabulous-dodol-a2e562.netlify.app/ 🌐
+Our website is hosted on the Netlify hosting platform. Thanks to Netlify, we can showcase all the work done. The website can be accessed through the following link: https://blod-coffe.netlify.app/ 🌐
 
 Technologies Used 💻
 
